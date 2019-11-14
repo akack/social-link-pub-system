@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,9 +8,18 @@ import { FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public loginDetails = {
+    email: '',
+    password: ''
+  };
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  login() {
+    console.log('User login details: ', this.loginDetails);
+    this.router.navigate(['/Dashboard/Admin']);
   }
 
 }

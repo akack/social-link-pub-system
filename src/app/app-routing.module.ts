@@ -4,6 +4,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { EventsComponent } from './events/events.component';
 import { BookingsComponent } from './bookings/bookings.component';
+import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
+import { ErrorComponent } from './error/error.component';
 
 
 const routes: Routes = [
@@ -26,6 +28,15 @@ const routes: Routes = [
   {
     path: 'Bookings',
     component: BookingsComponent
+  }
+  ,
+  {
+    path: 'Dashboard/Admin',
+    component: DashboardComponent
+  },
+  {
+    path: '**',
+    component: ErrorComponent
   }
 ];
 
