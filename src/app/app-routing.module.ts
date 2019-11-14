@@ -6,6 +6,7 @@ import { EventsComponent } from './events/events.component';
 import { BookingsComponent } from './bookings/bookings.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
+import { StaffComponent } from './Dashboard/staff/staff.component';
 
 
 const routes: Routes = [
@@ -35,9 +36,14 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
+    path: 'Dashboard/Staff',
+    component: StaffComponent
+  },
+  {
     path: '**',
     component: ErrorComponent
-  }
+  },
+
 ];
 
 @NgModule({

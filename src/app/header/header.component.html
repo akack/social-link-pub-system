@@ -18,11 +18,15 @@
           <a class="nav-link" href="#">Bookings</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Staff</a>
+          <a class="nav-link" href="/Dashboard/Staff" *ngIf="isLoggedIn()">Staff</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Dashboard/Admin" *ngIf="isLoggedIn()">Admin</a>
+          </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a href="/Login" class="nav-item0">LOG IN</a>
+        <a href="/Login" class="nav-item0" *ngIf="!isLoggedIn()">LOG IN</a>
+        <a href="/Logout" class="nav-item0" *ngIf="isLoggedIn()">LOG OUT</a>
       </form>
     </div>
   </div>

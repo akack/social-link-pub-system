@@ -33,6 +33,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StaffComponent } from './Dashboard/staff/staff.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     DashboardComponent,
     ErrorComponent,
+    StaffComponent,
 
   ],
   imports: [
