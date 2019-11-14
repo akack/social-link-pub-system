@@ -91,7 +91,7 @@
 .event-poster {
   margin-left: .2em;
   margin-right: .2em;
-  height: 30em;
+  height: 17em !important;
   width: 100%;
 }
 
@@ -104,7 +104,25 @@
   border-top-right-radius: none !important;
 }
 
-.carousel-control-prev-icon {
+.carousel-control-prev-icon, .carousel-control-next-icon {
   color: #000 !important;
   background-color: green !important;
+}
+
+.event-poster-title {
+  background: linear-gradient(
+    to left,
+    #ff9b80 0%,
+    #ff9b80 5px,
+    transparent
+  );
+}
+
+.event-poster-content {
+  background: linear-gradient(
+    to left,
+    #eeeceb 0%,
+    #eeeceb 5px,
+    transparent
+  );
 }

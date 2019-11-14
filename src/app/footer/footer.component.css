@@ -1,0 +1,9 @@
+.h3-line-seperator {
+  background: linear-gradient(
+    to right,
+    #bdbdbd 0%,
+    #bdbdbd 5px,
+    transparent 5px
+  );
+  padding: 8px;
+}
