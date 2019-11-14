@@ -1,3 +1,12 @@
 .login-page {
   margin-top: 1em;
 }
+.form-container {
+  background: linear-gradient(
+    to right,
+    #ff9b80 0%,
+    #ff9b80 5px,
+    transparent 2px
+  );
+  padding-left: 15px;
+}
