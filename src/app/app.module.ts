@@ -23,6 +23,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClarityModule } from '@clr/angular';
 import { EventsComponent } from './events/events.component';
 import { BookingsComponent } from './bookings/bookings.component';
+import { FourUpcomingEventsComponent } from './four-upcoming-events/four-upcoming-events.component';
+import { EventsGalleryComponent } from './events-gallery/events-gallery.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +35,9 @@ import { BookingsComponent } from './bookings/bookings.component';
     LoginComponent,
     EventsComponent,
     BookingsComponent,
+    FourUpcomingEventsComponent,
+    EventsGalleryComponent,
+    FooterComponent,
 
   ],
   imports: [
