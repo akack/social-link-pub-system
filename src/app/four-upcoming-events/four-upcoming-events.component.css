@@ -37,8 +37,8 @@
   text-decoration: none;
   background: linear-gradient(
     to right,
-    rgb(102, 192, 102) 0%,
-    rgb(102, 192, 102) 5px,
+    #e4e2e2 0%,
+    #e4e2e2 5px,
     transparent
     /* transparent  5px */
   );
@@ -54,8 +54,8 @@
 .card {
   background: linear-gradient(
     to right,
-    #ff9b80 0%,
-    #ff9b80 5px,
+    #e4e2e2 0%,
+    #e4e2e2 5px,
     transparent 5px
   );
   background-repeat: repeat-x;
@@ -65,7 +65,7 @@
   text-decoration: none;
 }
 .card:hover {
-  background: linear-gradient(to right, #ff9b80 0%, #ff9b80 5px, transparent);
+  background: linear-gradient(to right, #e4e2e2 0%, #e4e2e2 5px, transparent);
 }
 
 
@@ -107,22 +107,25 @@
 .carousel-control-prev-icon, .carousel-control-next-icon {
   color: #000 !important;
   background-color: green !important;
+  border-radius: 50%;
 }
 
 .event-poster-title {
-  background: linear-gradient(
+  background-color: #e4e2e2;
+  /* background: linear-gradient(
     to left,
-    #ff9b80 0%,
-    #ff9b80 5px,
+    #e4e2e2 0%,
+    #e4e2e2 5px,
     transparent
-  );
+  ); */
 }
 
 .event-poster-content {
-  background: linear-gradient(
+  background-color: #e4e2e2;
+  /* background: linear-gradient(
     to left,
     #eeeceb 0%,
     #eeeceb 5px,
     transparent
-  );
+  ); */
 }
