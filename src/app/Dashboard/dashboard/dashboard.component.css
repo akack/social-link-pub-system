@@ -24,3 +24,12 @@
 .clr-col-md-3:hover {
   background: linear-gradient(to right, #e4e2e2 0%, #e4e2e2 5px, transparent);
 }
+.h3-line-seperator {
+  /* background: linear-gradient(
+    to right,
+    #ff9b80 0%,
+    #ff9b80 5px,
+    transparent 5px
+  );
+  padding: 8px; */
+}

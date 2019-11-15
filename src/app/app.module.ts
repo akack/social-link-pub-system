@@ -21,6 +21,8 @@ import {
   MatToolbarModule,
   MatListModule,
   MatButtonModule,
+  MatPaginatorModule,
+  MatTableModule,
 } from '@angular/material';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -78,7 +80,9 @@ import { EventsListComponent } from './Dashboard/events-list/events-list.compone
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
