@@ -9,6 +9,7 @@ import { ErrorComponent } from './error/error.component';
 import { StaffComponent } from './Dashboard/staff/staff.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NewEventComponent } from './Dashboard/new-event/new-event.component';
+import { EventsListComponent } from './Dashboard/events-list/events-list.component';
 
 
 const routes: Routes = [
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path: 'Dashboard/New-Event',
     component: NewEventComponent
+  },
+  {
+    path: 'Dashboard/Event-List',
+    component: EventsListComponent
   },
   {
     path: '**',

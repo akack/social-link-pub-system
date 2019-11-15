@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   }
 
   isLoggedIn() {
-    return false;
+    return true;
   }
 
 }

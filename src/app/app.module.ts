@@ -36,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StaffComponent } from './Dashboard/staff/staff.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NewEventComponent } from './Dashboard/new-event/new-event.component';
+import { EventsListComponent } from './Dashboard/events-list/events-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +54,7 @@ import { NewEventComponent } from './Dashboard/new-event/new-event.component';
     StaffComponent,
     LogoutComponent,
     NewEventComponent,
+    EventsListComponent,
 
   ],
   imports: [

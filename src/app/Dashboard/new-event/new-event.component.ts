@@ -24,7 +24,7 @@ export class NewEventComponent implements OnInit {
     ticket_price_vip: '',
     ticket_price_normal: ''
   };
-  public  artistName: '';
+  public artistName: '';
   public performingTime: '';
   public imagePreview: string;
 
@@ -36,12 +36,10 @@ export class NewEventComponent implements OnInit {
 
   onChangeImg(event: Event) {
     const file = (event.target as HTMLInputElement).files[0];
-
     const reader = new FileReader();
     reader.onload = () => {
       this.imagePreview = reader.result.toString();
-    }
-
+    };
     reader.readAsDataURL(file);
   }
 
