@@ -6,12 +6,15 @@
 
         <div class="clr-col-12">
           <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
-            <img  [src]="this.imagePreview" class="img-fluid" [alt]="">
+            <img [src]="this.imagePreview" class="img-fluid" [alt]="">
           </div>
           <hr />
           <label>SELECT POSTER *</label><br />
-          <button class="btn btn-outline" type="button" (click)="filePicker.click()"><clr-icon shape="add"></clr-icon>Pick Poster</button>
-          <input class="pick-poster" type="file" placeholder="Select Poster" name="poster_url" [(ngModel)]="eventDetails.poster_url" #filePicker (change)="onChangeImg($event)">
+          <button class="btn btn-outline" type="button" (click)="filePicker.click()">
+            <clr-icon shape="add"></clr-icon>Pick Poster
+          </button>
+          <input class="pick-poster" type="file" accept="image/*" placeholder="Select Poster" name="poster_url"
+            [(ngModel)]="eventDetails.poster_url" #filePicker (change)="onChangeImg($event)">
         </div>
       </div>
       <div class="form-group">
@@ -44,12 +47,12 @@
       </div>
 
       <div class="form-group">
-          <mat-form-field class="clr-col-12">
-            <textarea matInput type="TEXT" placeholder="ADDITIONAL INFORMATION" name="description"
-              [(ngModel)]="eventDetails.description"></textarea>
+        <mat-form-field class="clr-col-12">
+          <textarea matInput type="TEXT" placeholder="ADDITIONAL INFORMATION" name="description"
+            [(ngModel)]="eventDetails.description"></textarea>
 
-          </mat-form-field>
-        </div>
+        </mat-form-field>
+      </div>
       <div *ngIf="lineup.length">
         <h3 class="h3-home-title">Lineup Added</h3>
         <mat-list role="list" *ngFor="let artist of lineup">
@@ -61,9 +64,9 @@
       </div>
       <div class="form-group">
         <div class="clr-col-12">
-          <label>Event Line Up</label><br />
+          <label>EVENT LINE UP</label><br />
           <button class="btn btn-primary" (click)="openModal()">
-            <clr-icon shape="add"></clr-icon>ADD LINE UP
+            <clr-icon shape="add"></clr-icon>ADD ARTIST
           </button>
           <form #artistForm="ngForm">
             <clr-modal [(clrModalOpen)]="basic">
@@ -92,7 +95,7 @@
       </div>
 
       <button class="btn btn-primary" [disabled]="!eventForm.valid || !lineup.length" (click)="submitEvent()">
-        <clr-icon shape="add"></clr-icon>SUBMIT
+        SUBMIT
       </button>
     </form>
   </div>
