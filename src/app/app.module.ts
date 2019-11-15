@@ -34,6 +34,8 @@ import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StaffComponent } from './Dashboard/staff/staff.component';
+import { LogoutComponent } from './logout/logout.component';
+import { NewEventComponent } from './Dashboard/new-event/new-event.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,8 @@ import { StaffComponent } from './Dashboard/staff/staff.component';
     DashboardComponent,
     ErrorComponent,
     StaffComponent,
+    LogoutComponent,
+    NewEventComponent,
 
   ],
   imports: [

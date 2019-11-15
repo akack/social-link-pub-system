@@ -7,6 +7,8 @@ import { BookingsComponent } from './bookings/bookings.component';
 import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
 import { ErrorComponent } from './error/error.component';
 import { StaffComponent } from './Dashboard/staff/staff.component';
+import { LogoutComponent } from './logout/logout.component';
+import { NewEventComponent } from './Dashboard/new-event/new-event.component';
 
 
 const routes: Routes = [
@@ -36,8 +38,16 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
+    path: 'Logout',
+    component: LogoutComponent
+  },
+  {
     path: 'Dashboard/Staff',
     component: StaffComponent
+  },
+  {
+    path: 'Dashboard/New-Event',
+    component: NewEventComponent
   },
   {
     path: '**',

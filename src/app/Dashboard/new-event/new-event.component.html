@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="new-event-form">
+    <h3 class="h3-home-title">Add event details</h3>
+    <form #eventForm="ngForm">
+      <div class="form-group">
+
+        <div class="clr-col-12">
+          <div>
+            <img src="../../../assets//img/1.png" class="img-fluid" alt="Responsive image">
+          </div>
+          <hr />
+          <label>SELECT POSTER *</label><br />
+          <input type="file" placeholder="Select Poster" name="poster_url" [(ngModel)]="eventDetails.poster_url">
+        </div>
+      </div>
+      <div class="form-group">
+        <mat-form-field class="clr-col-12">
+          <input matInput placeholder="Title" name="title" [(ngModel)]="eventDetails.title" required>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <clr-date-container class="clr-col-12">
+          <label>Date</label>
+          <input type="date" clrDate name="date" name="date" [(ngModel)]="eventDetails.date" required>
+        </clr-date-container>
+      </div>
+      <div class="form-group">
+        <mat-form-field class="clr-col-12">
+          <input matInput placeholder="Venue" name="venue" [(ngModel)]="eventDetails.venue" required>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field class="clr-col-12">
+          <input matInput type="number" placeholder="TICKET PRICE NORMAL" name="ticket_price_vip"
+            [(ngModel)]="eventDetails.ticket_price_vip" required>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field class="clr-col-12">
+          <input matInput type="number" placeholder="TICKET PRICE VIP" name="ticket_price_normal"
+            [(ngModel)]="eventDetails.ticket_price_normal" required>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+          <mat-form-field class="clr-col-12">
+            <textarea matInput type="TEXT" placeholder="ADDITIONAL INFORMATION" name="description"
+              [(ngModel)]="eventDetails.description"></textarea>
+
+          </mat-form-field>
+        </div>
+      <div *ngIf="lineup.length">
+        <h3 class="h3-home-title">Lineup Added</h3>
+        <mat-list role="list" *ngFor="let artist of lineup">
+          <mat-list-item role="listitem"><img class="dj-image d-block w-10" src="../../assets/img/dj.png" height="40"
+              width="40" /> <span class="artist-name">{{artist.artist_name}}</span> on stage at <span
+              class="artist-time">{{artist.performing_time}} AM/PM.</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div class="form-group">
+        <div class="clr-col-12">
+          <label>Event Line Up</label><br />
+          <button class="btn btn-primary" (click)="openModal()">
+            <clr-icon shape="add"></clr-icon>ADD LINE UP
+          </button>
+          <form #artistForm="ngForm">
+            <clr-modal [(clrModalOpen)]="basic">
+              <h3 class="modal-title">ARTIST DETAILS</h3>
+              <div class="modal-body">
+
+                <mat-form-field class="clr-col-12">
+                  <input matInput type="text" placeholder="Artist Name" name="artist_name" [(ngModel)]="artistName"
+                    required>
+                </mat-form-field>
+                <mat-form-field class="clr-col-12">
+                  <input matInput type="time" placeholder="DJ / Perfoming Time" name="performing_time"
+                    [(ngModel)]="performingTime" required>
+                </mat-form-field>
+                <hr />
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary" [disabled]="!artistForm.valid" (click)="submitArtist()">
+                  <clr-icon shape="add"></clr-icon>SUBMIT
+                </button>
+              </div>
+            </clr-modal>
+          </form>
+
+        </div>
+      </div>
+
+      <button class="btn btn-primary" [disabled]="!eventForm.valid || !lineup.length" (click)="submitEvent()">
+        <clr-icon shape="add"></clr-icon>SUBMIT
+      </button>
+    </form>
+  </div>
+</div>
