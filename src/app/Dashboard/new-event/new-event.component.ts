@@ -26,21 +26,31 @@ export class NewEventComponent implements OnInit {
   };
   public  artistName: '';
   public performingTime: '';
-
+  public imagePreview: string;
 
   constructor() { }
 
   ngOnInit() {
     console.log('Line Up: ', this.lineup);
   }
+
+  onChangeImg(event: Event) {
+    const file = (event.target as HTMLInputElement).files[0];
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.imagePreview = reader.result.toString();
+    }
+
+    reader.readAsDataURL(file);
+  }
+
   setradio(e: string): void {
     this.selectedLink = e;
-
   }
 
   openModal() {
     this.basic = true;
-
   }
 
   isSelected(name: string): boolean {

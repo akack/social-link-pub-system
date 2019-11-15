@@ -5,28 +5,28 @@
       <div class="form-group">
 
         <div class="clr-col-12">
-          <div>
-            <img src="../../../assets//img/1.png" class="img-fluid" alt="Responsive image">
+          <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview">
+            <img  [src]="this.imagePreview" class="img-fluid" [alt]="">
           </div>
           <hr />
           <label>SELECT POSTER *</label><br />
-          <input type="file" placeholder="Select Poster" name="poster_url" [(ngModel)]="eventDetails.poster_url">
+          <button class="btn btn-outline" type="button" (click)="filePicker.click()"><clr-icon shape="add"></clr-icon>Pick Poster</button>
+          <input class="pick-poster" type="file" placeholder="Select Poster" name="poster_url" [(ngModel)]="eventDetails.poster_url" #filePicker (change)="onChangeImg($event)">
         </div>
       </div>
       <div class="form-group">
         <mat-form-field class="clr-col-12">
-          <input matInput placeholder="Title" name="title" [(ngModel)]="eventDetails.title" required>
+          <input matInput placeholder="TITLE" name="title" [(ngModel)]="eventDetails.title" required>
         </mat-form-field>
       </div>
       <div class="form-group">
         <clr-date-container class="clr-col-12">
-          <label>Date</label>
-          <input type="date" clrDate name="date" name="date" [(ngModel)]="eventDetails.date" required>
+          <input type="date" clrDate placeholder="SELECT DATE" name="date" [(ngModel)]="eventDetails.date" required>
         </clr-date-container>
       </div>
       <div class="form-group">
         <mat-form-field class="clr-col-12">
-          <input matInput placeholder="Venue" name="venue" [(ngModel)]="eventDetails.venue" required>
+          <input matInput placeholder="VENUE" name="venue" [(ngModel)]="eventDetails.venue" required>
         </mat-form-field>
       </div>
 

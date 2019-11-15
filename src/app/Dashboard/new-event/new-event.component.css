@@ -31,3 +31,18 @@
   margin-left: .5em;
 }
 
+.pick-poster {
+  display: none;
+}
+
+.image-preview img{
+  height: 10em;
+  margin: 1rem 0;
+  text-align: center;
+  justify-content: center;
+}
+.image-preview img{
+  height: 10em;
+}
+
+
